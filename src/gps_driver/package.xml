@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>gps_driver</name>
+  <version>0.0.1</version>
+  <description>GNSS driver that publishes Customgps</description>
+  <maintainer email="fasateaniket5@gmail.com">aniketfasate</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- runtime deps -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>gps_interface</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+
+  <!-- THIS is the important part for Python packages -->
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

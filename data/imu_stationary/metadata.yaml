@@ -1,0 +1,44 @@
+rosbag2_bagfile_information:
+  version: 9
+  storage_identifier: mcap
+  duration:
+    nanoseconds: 328126899099
+  starting_time:
+    nanoseconds_since_epoch: 1761339307242608363
+  message_count: 13126
+  topics_with_message_count:
+    - topic_metadata:
+        name: /imu
+        type: gps_interface/msg/Vectornav
+        serialization_format: cdr
+        offered_qos_profiles:
+          - history: unknown
+            depth: 0
+            reliability: reliable
+            durability: volatile
+            deadline:
+              sec: 9223372036
+              nsec: 854775807
+            lifespan:
+              sec: 9223372036
+              nsec: 854775807
+            liveliness: automatic
+            liveliness_lease_duration:
+              sec: 9223372036
+              nsec: 854775807
+            avoid_ros_namespace_conventions: false
+        type_description_hash: RIHS01_276142f7de33e661fb293785da5f8114d01b1a90bd637040a5b6b3fcdcc92e6d
+      message_count: 13126
+  compression_format: ""
+  compression_mode: ""
+  relative_file_paths:
+    - imu_stationary_0.mcap
+  files:
+    - path: imu_stationary_0.mcap
+      starting_time:
+        nanoseconds_since_epoch: 1761339307242608363
+      duration:
+        nanoseconds: 328126899099
+      message_count: 13126
+  custom_data: ~
+  ros_distro: jazzy

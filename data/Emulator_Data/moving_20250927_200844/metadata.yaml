@@ -1,0 +1,44 @@
+rosbag2_bagfile_information:
+  version: 9
+  storage_identifier: mcap
+  duration:
+    nanoseconds: 339733437252
+  starting_time:
+    nanoseconds_since_epoch: 1759003726331982317
+  message_count: 461
+  topics_with_message_count:
+    - topic_metadata:
+        name: /gps
+        type: gps_interface/msg/Customgps
+        serialization_format: cdr
+        offered_qos_profiles:
+          - history: unknown
+            depth: 0
+            reliability: reliable
+            durability: volatile
+            deadline:
+              sec: 9223372036
+              nsec: 854775807
+            lifespan:
+              sec: 9223372036
+              nsec: 854775807
+            liveliness: automatic
+            liveliness_lease_duration:
+              sec: 9223372036
+              nsec: 854775807
+            avoid_ros_namespace_conventions: false
+        type_description_hash: RIHS01_f07db1122539173a4aa4066187d078fc652586824a0eea6ee314ce3ec0847c0a
+      message_count: 461
+  compression_format: ""
+  compression_mode: ""
+  relative_file_paths:
+    - moving_20250927_200844_0.mcap
+  files:
+    - path: moving_20250927_200844_0.mcap
+      starting_time:
+        nanoseconds_since_epoch: 1759003726331982317
+      duration:
+        nanoseconds: 339733437252
+      message_count: 461
+  custom_data: ~
+  ros_distro: jazzy

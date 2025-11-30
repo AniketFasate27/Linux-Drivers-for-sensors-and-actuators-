@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>gps_interface</name>
+  <version>0.0.1</version>
+  <description>Messages and interfaces for EECE5554 labs</description>
+  <maintainer email="you@northeastern.edu">Your Name</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Message dependencies -->
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+
+  <!-- rosidl generation + runtime -->
+  <build_depend>rosidl_default_generators</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <!-- REQUIRED for packages that install .msg/.srv/.action -->
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

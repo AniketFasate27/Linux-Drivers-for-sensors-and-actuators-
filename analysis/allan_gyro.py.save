@@ -1,0 +1,26 @@
+import sys, math, numpy as np, pandas as pd
+import matplotlib.pyplot as plt
+import allantools as at
+
+def allan_from_rate(rate, fs, label):
+    # Overlapping Allan deviation on "frequency" (rate) data
+    taus, adev, adev_err, _ = at.oadev(rate, rate=fs, data_type='freq', taus='all')
+
+    # N at tau = 1 s (interpolate if 1.0 not exactly present)
+    def interp_at_tau(target):
+        if target <= taus[0]: return adev[0]
+        if target >= taus[-1]: return adev[-1]
+        i = np.searchsorted(taus, target)
+        if taus[i] == target: return adev[i]
+        # log-log linear interpolation
+        x0,x1 = math.log10(taus[i-1]), math.log10(taus[i])
+        y0,y1 = math.log10(adev[i-1]), math.log10(adev[i])
+        y = y0 + (y1-y0)*(math.log10(target)-x0)/(x1-x0)
+        return 10**y
+
+    N = interp_at_tau(1.0)                 # rad/√s
+    i_min = int(np.argmin(adev))
+    B = adev[i_min]                         # rad/s
+    tau_B = taus[i_min]
+
+    # K from +0.5 slope region
